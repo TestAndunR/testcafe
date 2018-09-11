@@ -24,7 +24,7 @@ exports.handler = function (event, context, callback) {
     rds.query({
         instanceIdentifier: 'issueValidate',
         query: 'Insert into Persons(PersonID,LastName,FirstName,Address,City)Values(?,?,?,?,?)',
-        inserts: [0.Kannangara, Andun, Galle, Galle]
+        inserts: [0,"Kannangara", "Andun", "Galle", "Galle"]
     }, function (error, results, connection) {
         if (error) {
             console.log("Error occurred");
