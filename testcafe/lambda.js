@@ -5,6 +5,8 @@ const cognito_idp = new AWS.CognitoIdentityServiceProvider();
 let SL_AWS = require('slappforge-sdk-aws');
 const rds = new SL_AWS.RDS(connectionManager);
 
+
+console.log("Smoke Test")
 exports.handler = function (event, context, callback) {
     cognito_idp.listUsers({
         UserPoolId: process.env.UserPoolId_cognitoissueValidation,
